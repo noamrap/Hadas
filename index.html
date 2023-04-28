@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
+           <link rel="snippet" type="text/html" href="https://noamrap.github.io/SNIPPEST/index.html">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const snippets = document.querySelectorAll("[data-snippet]");
+            for (const snippet of snippets) {
+                fetch(snippet.getAttribute("data-snippet"))
+                    .then(response => response.text())
+                    .then(html => snippet.innerHTML = html);
+            }
+        });
+    </script>
     <script src="https://cdn.enable.co.il/licenses/enable-L18859tnuij096k5-0423-43815/init.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
@@ -410,14 +421,7 @@
             }
         }
     </style>
-    <div class="footer">
-        <div class="container">
-            <p>
-                &copy;האתר קודד והועלה על ידי <a href="https://noamrap.github.io/Noam-s-Site/">נועם בניית אתרים</a> <br />
-                054-48349998
-            </p>
-        </div>
-    </div>
+  <div data-snippet="https://noamrap.github.io/SNIPPEST/index.html"></div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
